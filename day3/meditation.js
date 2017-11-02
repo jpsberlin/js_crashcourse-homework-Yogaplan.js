@@ -7,7 +7,7 @@ module.exports = class Meditation {
       
     }
     static create(obj) {
-        return new Meditation(obj.name.time.beginner);
+        return new Meditation(obj.name, obj.time, obj.beginner);
     }
 
 }
