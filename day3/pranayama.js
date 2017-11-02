@@ -6,6 +6,6 @@ module.exports = class Pranayama {
       
     }
     static create(obj) {
-        return new Asana(obj.name.time.beginner);
+        return new Pranayama(obj.name,obj.time, obj.beginner);
     }
 }
