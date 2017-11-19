@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    if pranayama
+        h1 Hello #{pranayama.name}!
+        p Here are your full details:
+        pre= JSON.stringify(pranayama, null, 2)
+    else
+        h1 There's no such pranayama!
+    script.
+        console.log(!{JSON.stringify(pranayama)})

@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    h1 Hello!
+    if yogaset.length
+        y Here are the yogaset:
+        table
+            thead
+                td ID
+                td Name
+                td Time
+            each yogaset in yogaset
+                tr
+                    td #{asana.id}
+                    td #{asana.name}
+                    td #{asana.age}
+
+        pre= JSON.stringify(yogaset, null, 2)
+    else
+        y There's no one yet :(
+    script.
+        console.log(!{JSON.stringify(yogaset)})
