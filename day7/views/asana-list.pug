@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    h1 Hello!
+    if exercise.length
+        p Here are the exercises:
+        table
+            thead
+                td ID
+                td Name
+                td Age
+            each asana in exercise
+                tr
+                    td #{asana.id}
+                    td #{asana.name}
+                    td #{asana.time}
+
+        pre= JSON.stringify(exercise, null, 2)
+    else
+        p There's no one yet :(
+    script.
+        console.log(!{JSON.stringify(exercise)})
